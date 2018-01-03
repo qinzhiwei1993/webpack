@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');//删除没有声明了但是没有使用的模块  同时进行压缩
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');//删除声明了但是没有使用的模块  同时进行压缩
 
 const extractLess = new ExtractTextPlugin({
     filename: "[name].css",
