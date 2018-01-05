@@ -6,9 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>  <!--注意这里必须是htmlWebpackPlugin. 使用的是ejs模板引擎-->
+    <!--将生成文件插入页面内，减少请求。  同时在webpack.config.js中 inject:false-->
+
+    <!--<%= compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source() %>-->
 
 </head>
 <body>
     <!--这是一行注释。 这个文件是生成html的模板文件-->
+    <!--<% for(var k in htmlWebpackPlugin.files.chunks) {%>-->
+        <!--<% if(k !== 'main'){ %>-->
+            <!--<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[k].entry %>"></script>-->
+        <!--<% } %>-->
+    <!--<% } %>-->
 </body>
 </html>

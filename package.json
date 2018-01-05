@@ -4,10 +4,10 @@
   "description": "learn webpack and do some practices",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
     "babel": "babel src/script -d build/script",
-    "demo02": "webpack --config ./demo02/webpack.config.js --progress --watch"
+    "demo02": "webpack --config ./demo02/webpack.config.js --progress",
+    "demo03": "webpack --config ./demo03/webpack.config.js --progress --display-reasons"
   },
   "repository": {
     "type": "git",
@@ -27,13 +27,16 @@
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
+    "postcss-loader": "^2.0.10",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.1.4",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }

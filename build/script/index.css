@@ -1,0 +1,13 @@
+.box {
+  padding: 10px;
+  font-size: 30px;
+  background: #eee;
+  cursor: pointer;
+}
+.box:hover {
+  color: green;
+}
+.container {
+  margin: 30px auto;
+  width: 600px;
+}
