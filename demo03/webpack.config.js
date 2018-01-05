@@ -19,7 +19,28 @@ module.exports = {
           {
               test: /\.css$/,
               include: path.resolve(__dirname, './src/css'), //可以减少loader查询的文件，提高打包速度
-              loader: 'style-loader!css-loader!postcss-loader'
+              loaders:[
+                  'style-loader',
+                  {
+                     loader: 'css-loader',
+                      options: {
+                          importLoaders: 1
+                      }
+                  },
+                  {
+                      loader: 'postcss-loader', //兼容不同浏览器， 给css加上前缀
+                      options:{
+                          ident: 'postcss',
+                          path: path.resolve(__dirname, './postcss.config.js'),
+                          plugins: (loader) => [
+                             require('postcss-import')({ root: loader.resourcePath }),
+                             require('postcss-cssnext')(),
+                             require('autoprefixer')(),
+                             //require('cssnano')()  //压缩
+                          ]
+                      }
+                  }
+              ]
           }
       ]
     },

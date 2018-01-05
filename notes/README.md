@@ -12,8 +12,14 @@
 
     style-loader 将css嵌入页面内
     css-loader   打包css
-    less-loader  编译less为css 
+    less-loader  编译less为css
+    bable-loaer  编译为可用的js文件
+    postcss-loader  负责给css属性加上各个浏览器支持的前缀  demo03
+
 
 3、plugins 插件    
 
     html-webpack-plugin 打包编译html
+    clean-webpack-plugin  每次打包前清楚文件夹
+    uglifyjs-webpack-plugin  压缩文件
+    extract-text-webpack-plugin  从捆绑的包中提取内容到单独的文件
