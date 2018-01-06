@@ -9,6 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: 'js/[name].bundle.js'
     },
+
     module:{
       loaders:[
           {
