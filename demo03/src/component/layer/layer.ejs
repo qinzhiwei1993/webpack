@@ -1,0 +1,9 @@
+<div class="layer">
+    <img src="${require('../../../assets/avatar.png')}" alt="">  <!--相对路径和绝对路径都不能用-->
+    <div>this is <%= name %> layer</div>
+    <ul>
+        <% for (var i = 0; i < arr.length; i++) {%>
+            <li> <%= arr[i] %></li>
+        <% } %>
+    </ul>
+</div>

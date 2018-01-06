@@ -1,9 +1,19 @@
 // import layer from "./layer.html";
+import './layer.less';
 
-function layer(){
+import layer from "./layer.ejs";
+
+function Layer(){
     return {
         name: 'layer',
-        template: layer
+        template: layer({
+            name: '模板',
+            arr:[
+                'oppop',
+                'iphone',
+                'HUAWEI'
+            ]
+        })
     }
 }
-export default layer;
+export default Layer;

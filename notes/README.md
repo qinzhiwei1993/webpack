@@ -15,6 +15,11 @@
     less-loader  编译less为css
     bable-loaer  编译为可用的js文件
     postcss-loader  负责给css属性加上各个浏览器支持的前缀  demo03
+    html-loader  编译html模板文件
+    
+    url-loader    打包image  和file的区别是，可以限制多少字节内的图片转为base64格式，减少http请求
+    file-loader   打包image  
+    image-webpack-loader  压缩image。 需要配置url-loader或者file-loader使用
 
 
 3、plugins 插件    
@@ -23,3 +28,7 @@
     clean-webpack-plugin  每次打包前清楚文件夹
     uglifyjs-webpack-plugin  压缩文件
     extract-text-webpack-plugin  从捆绑的包中提取内容到单独的文件
+    
+    //在postcss中用到
+    press  css预处理器，让css可以像sass一样工作。
+    cssnano 压缩
