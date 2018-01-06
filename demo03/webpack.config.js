@@ -9,7 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: 'js/[name].bundle.js'
     },
-
+    devtool: 'inline-source-map', //定位出错的源码位置
     module:{
       loaders:[
           {

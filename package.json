@@ -8,7 +8,10 @@
     "babel": "babel src/script -d build/script",
     "demo02": "webpack --config ./demo02/webpack.config.js --progress",
     "demo03_dev": "NODE_ENV=development webpack --config ./demo03/webpack.config.js --progress --display-reasons",
-    "demo03_pro": "NODE_ENV=production webpack --config ./demo03/webpack.config.js --progress --display-reasons"
+    "demo03_pro": "NODE_ENV=production webpack --config ./demo03/webpack.config.js --progress --display-reasons",
+    "demo04": "webpack --config ./demo04/webpack.config.js --progress --display-reasons",
+    "demo04_node": "webpack-dev-server --config ./demo04/webpack.config.js --open && node ./demo04/app.js",
+    "demo04_middleware": "node ./demo04/server.js"
   },
   "repository": {
     "type": "git",
@@ -51,5 +54,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }
